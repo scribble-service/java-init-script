@@ -1,3 +1,4 @@
+import os
 import yaml
 import configparser
 from xml.etree import ElementTree as et
@@ -44,3 +45,5 @@ with open('docker/docker-compose.yml', 'r') as file:
 with open('docker/docker-compose.yml', 'w') as file:
     yaml.dump(data, file)
 
+os.remove('config.ini')
+os.remove('setup.py')
